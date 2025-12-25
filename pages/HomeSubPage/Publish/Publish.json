@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "mp-uploader": "weui-miniprogram/uploader/uploader",
+    "mp-dialog": "weui-miniprogram/dialog/dialog"
+  }
+}

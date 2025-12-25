@@ -1,0 +1,35 @@
+<view class="userInfoPage" wx:if="{{!successSetInfo}}">
+  <view class="avatar">
+    <image src="{{AvatarUrl}}" style="border: {{bordeStyle}}" bindtap="setAvatarUrl"></image>
+  </view>
+  <!-- 用户信息部分 -->
+  <view class="userInfoPart">
+    <view class="con">
+      <text class="con2">昵称：</text>
+      <input type="nickname" value="{{NickName}}" bindblur="setNickName"/>
+    </view>
+    <view class="con">
+      <text class="con2">姓名：</text>
+      <input type="text" value="{{RealName}}" bindblur="setRealName"/>
+    </view>
+    <view class="con">
+      <text class="con2">性别：</text>
+      <radio-group class="con3" bindchange="setGender">
+        <radio class="radio1" checked="{{Gender}}" value="1">男</radio>
+        <radio class="radio2" checked="{{!Gender}}" value="0">女</radio>
+      </radio-group>
+    </view>
+    <view class="con">
+      <text class="con2">年龄：</text>
+      <input type="number" value="{{Age}}" bindblur="setAge"/>
+    </view>
+    <view class="con">
+      <text class="con2">手机：</text>
+      <input type="number" value="{{Telephone}}" bindblur="setTelephone"/>
+    </view>
+    <button class="color" bindtap="saveUserInfo">保存</button>
+  </view>
+</view>
+
+<!-- 设置成功弹窗 -->
+<mp-dialog buttons="{{btns}}" mask="true" mask-closable="{{false}}" show="{{successSetInfo}}" title="{{successSetText}}" bindbuttontap="successSetInfo"></mp-dialog>

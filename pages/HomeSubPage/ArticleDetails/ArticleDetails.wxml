@@ -1,0 +1,74 @@
+<view class="articleDetails" wx:if="{{!isConfirmDelete&&!isConfirmAdopt&&!isShowError&&!isShowSuccess}}">
+  <view class="DogShow">
+    <view>
+      <image class="DogImg" src="{{dogsDetails.photo}}" bindtap="getImageDetail" mode="widthFix"></image>
+    </view>
+    <view class="DogMsg">
+      <view>
+        <text class="msgName">昵称：</text>
+        <text class="msgValue" user-select="true">{{dogsDetails.dogName}}</text>
+      </view>
+      <view>
+        <text class="msgName">性别：</text>
+        <text class="msgValue" user-select="true">{{dogGender}}</text>
+      </view>
+      <view>
+        <text class="msgName">年龄：</text>
+        <text class="msgValue" user-select="true">{{dogAge}}</text>
+      </view>
+      <view>
+        <text class="msgName">品种：</text>
+        <text class="msgValue" user-select="true">{{dogsDetails.type}}</text>
+      </view>
+      <view>
+        <text class="msgName">送养人描述：</text>
+      </view>
+      <view>
+        <image src="/image/Home/icons/quotleft.png" style="width: 35rpx; height: 30rpx;"></image>
+      </view>
+      <view>
+        <text class="msgValue" user-select="true">{{articleDetails.description}}</text>
+      </view>
+      <view>
+        <image src="/image/Home/icons/quotright.png" style="width: 45rpx; height: 45rpx; float: right;"></image>
+      </view>
+      <text style="color: #A9A9A9;">\n{{articleDetails.publishTime}}\n\n</text>
+      <view class="tipsText"><text>Tips：{{tips}}</text></view>
+      <text>\n\n\n\n</text>
+    </view>
+  </view>
+  <view class="userChoice">
+    <view class="userBtns">
+      <view class="btnContainer" wx:if="{{isShowDelete||isOwner}}" bindtap="deleteHandle">
+        <image class="Btn" src="/image/Home/icons/delete.png"></image>
+        <text class="btnMsg">删除</text>
+      </view>
+      <view class="btnContainer" bindtap="collectHandle" wx:if="{{!isOwner}}">
+        <image class="Btn" src="{{collectUrl}}"></image>
+        <text class="btnMsg">{{collectTxt}}</text>
+      </view>
+      <view class="btnContainer" bindtap="adoptHandle" wx:if="{{!isOwner}}">
+        <image class="Btn" src="/image/Home/icons/willing.png"></image>
+        <text class="btnMsg">领养</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 是否删除弹窗 -->
+<mp-dialog buttons="{{btns}}" mask="true" mask-closable="{{false}}" show="{{isConfirmDelete}}" title="{{deleteDialogText}}" bindbuttontap="isOrnotDelete"></mp-dialog>
+
+<!-- 是否领养弹窗 -->
+<mp-dialog buttons="{{btns}}" mask="true" mask-closable="{{false}}" show="{{isConfirmAdopt}}" title="{{adoptDialogText}}" bindbuttontap="isOrnotAdopt"></mp-dialog>
+
+<!-- 请勿重复收养提示 -->
+<mp-dialog buttons="{{adoptBtns}}" mask="true" mask-closable="{{false}}" show="{{isShowError}}" title="{{error}}" bindbuttontap="repeatAdoptDialog"></mp-dialog>
+
+<!-- 成功发送收养申请提示 -->
+<mp-dialog buttons="{{adoptBtns}}" mask="true" mask-closable="{{false}}" show="{{isShowSuccess}}" title="{{success}}" bindbuttontap="successAdoptDialog"></mp-dialog>
+
+<!-- 未完善信息不可收藏弹窗 -->
+<mp-dialog buttons="{{setInfoBtns}}" mask="true" mask-closable="{{false}}" show="{{!isHaveEvenLogin01}}" title="{{toSetInfoTxt}}" bindbuttontap="ToSetUserInfo"></mp-dialog>
+
+<!-- 未完善信息不可领养弹窗 -->
+<mp-dialog buttons="{{setInfoBtns}}" mask="true" mask-closable="{{false}}" show="{{!isHaveEvenLogin02}}" title="{{toSetInfoTxt}}" bindbuttontap="ToSetUserInfo"></mp-dialog>

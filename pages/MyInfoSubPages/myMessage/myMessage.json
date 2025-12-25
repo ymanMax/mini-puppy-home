@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "mp-dialog": "weui-miniprogram/dialog/dialog"
+  }
+}

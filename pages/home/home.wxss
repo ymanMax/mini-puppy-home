@@ -1,0 +1,115 @@
+.swiper {
+  height: 650rpx;
+}
+
+swiper-item {
+  height: 100%;
+}
+
+.swiper-item {
+  height: 100%;
+}
+
+.swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+
+.FuncCardsBox {
+  width: 100%;
+  position: absolute;
+  top: 600rpx;
+}
+
+.FuncCards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.FuncCards .Card {
+  background: #F6F6F6 !important;
+  text-align: center;
+  border: 3px gainsboro solid;
+  width: 220rpx;
+  background-color: white;
+  border-radius: 20rpx;
+  box-shadow: 5rpx -5rpx 10rpx #D6D6D6;
+}
+
+.FuncCards view image {
+  padding: 20rpx;
+  height: 100rpx;
+  width: 100rpx;
+}
+
+.iconText {
+  padding: 5rpx;
+  font-size: large;
+}
+
+.showArticles {
+  position: absolute;
+  top: 900rpx;
+  left: 8rpx;
+  right: 8rpx;
+}
+
+.partitionTitle image {
+  width: 30rpx;
+  height: 50rpx;
+  vertical-align: middle;
+}
+
+.partitionTitle text {
+  padding: 5rpx;
+  font-size: larger;
+  vertical-align: middle;
+  font-weight: bolder;
+}
+
+.articleList {
+  margin: 10rpx auto;
+  width: 98%;
+}
+
+.articleItem {
+  border: 2px gainsboro solid;
+  border-radius: 20rpx;
+  box-shadow: 5rpx -5rpx 10rpx #D6D6D6;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.articleMsg {
+  width: 450rpx;
+  height: 200rpx;
+  margin-top: 20rpx;
+}
+
+.articleTitle {
+  font-size: large;
+  font-weight: bolder;
+  padding: 5rpx;
+}
+
+.articleTime {
+  color: #A9A9A9;
+}
+
+.articleItem image {
+  width: 200rpx;
+  height: 200rpx;
+  padding: 20rpx;
+  vertical-align: middle;
+  border-radius: 15rpx;
+}
+
+.noArticle{
+  margin: 10rpx auto;
+  width: 95%;
+  background-color: #f1d4d8 !important;
+  border-left: 5rpx #DC143C solid;
+  padding: 10rpx;
+  border-radius: 10rpx;
+}

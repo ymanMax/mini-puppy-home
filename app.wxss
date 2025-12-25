@@ -1,0 +1,15 @@
+/**app.wxss**/
+
+/* 引入weui组件库 */
+/* weui官方文档：https://wechat-miniprogram.github.io/weui/docs/ */
+@import '/miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 

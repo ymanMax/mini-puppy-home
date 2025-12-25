@@ -1,0 +1,43 @@
+.Container {
+  display: flex;
+  justify-content: center;
+}
+
+.WelCome_Header {
+  padding: 100rpx;
+  position: fixed;
+  top: 20%;
+}
+
+.WelCome_Header image {
+  height: 250rpx;
+  width: 250rpx;
+}
+
+.WelCome_Tail_1 {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 45%;
+  width: 100%;
+}
+
+.WelCome_Tail_1 text {
+  font-size: 60rpx;
+  color: #1d1919;
+  font-family: "楷体";
+  font-weight: bolder;
+}
+.WelCome_Tail_2 {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 53%;
+  width: 100%;
+}
+
+.WelCome_Tail_2 text {
+  font-size: 35rpx;
+  color: #1d1919;
+  font-family: "楷体";
+}
